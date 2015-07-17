@@ -30,21 +30,21 @@ $.ajax(mainurl,{
   error: function(xhr, type, error){
     $main.text('Sorry ' + error);
   },
-  success: function(data){
+  success: function(data, textStatus, xhr){
     var profile = data;
     var avatar = profile.avatar_url;
 
     $img = $('<img>').attr('src', avatar);
       $main.append($img);
-    $h3 = ('<h3>').text(profile.name);
+    $h3 = $('<h3>').text(profile.name);
       $main.append($h3);
-    $h4 = ('<h4>').text(profile.email);
-      $main.append($h4);
-    $p = ('<p>').text(profile.html_url);
+    $h4 = $('<h4>').text(profile.email);
+       $main.append($h4);
+    $p = $('<p>').text(profile.html_url);
       $main.append($p);
-    $section = ('<section>').text(profile.blog);
+    $blog = $('<blog>').text(profile.blog);
       $main.append($blog);
-    $where = ('<where>').text(profile.location);
+    $location = $('<location>').text(profile.location);
       $main.append($location);
 
 
