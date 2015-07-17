@@ -59,6 +59,14 @@ var errorDisplayingProfile = function(xhr, type, error){
     $result.text("Oooops! " + error);
 };
 
+var settings = {
+  method: 'GET',
+  dataType: 'json',
+  url: 'https://api.github.com/users/egdelwonk',
+  error: function(xhr, type, error){
+    $result.text("Oooops! " + error);
+  },
+};
 
 var displayProfile = function(data, textStatus, xhr){
 $.ajax(repos,{
@@ -71,4 +79,13 @@ $.ajax(repos,{
 
 var errorDisplayingProfile = function(xhr, type, error){
     $result.text("Oooops! " + error);
+};
+
+var settings = {
+  method: 'GET',
+  dataType: 'json',
+  url: 'https://api.github.com/users/egdelwonk',
+  error: function(xhr, type, error){
+    $result.text("Oooops! " + error);
+  },
 };
