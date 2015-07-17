@@ -1,6 +1,6 @@
 var $main = $('.main');
-var $sidebar =('.sidebar')
-var $result = $('.result');
+var $repos =('.repos')
+// var $result = $('.result');
 var mainurl = 'https://api.github.com/users/jordanwilhite';
 var repos = 'https://api.github.com/users/jordanwilhite/repos';
 
