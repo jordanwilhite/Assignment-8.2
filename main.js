@@ -3,7 +3,7 @@ var $sidebar =('.sidebar')
 var $result = $('.result');
 var mainurl = 'https://api.github.com/users/jordanwilhite';
 var repos = 'https://api.github.com/users/jordanwilhite/repos';
-// var error = "error"; Take this out, maybe?
+
 
 var access_token = "bf2f63910395da2a11db7e7d6b1c3b30f04237eb"
 $.ajax({
@@ -36,67 +36,34 @@ $.ajax(mainurl,{
 
     $img = $('<img>').attr('src', avatar);
       $main.append($img);
+    $h3 = ('<h3>').text(profile.name);
+      $main.append($h3);
+    $h4 = ('<h4>').text(profile.email);
+      $main.append($h4);
+    $p = ('<p>').text(profile.html_url);
+      $main.append($p);
+    $section = ('<section>').text(profile.blog);
+      $main.append($blog);
+    $where = ('<where>').text(profile.location);
+      $main.append($location);
+
+
 
   console.log(profile);
   }
 
 });
 
-    // var profile = data;
-    // var name = profile.name;
-    // var blog = profile.blog;
-    // var location = profile.location;
-    // var email = profile.email;
-    // var avatar = profile.avatar_url;
-    // var html = profile.html_url;
-    // var repositories = profile.repositories;
-    //
-    //
-    // $('.results .name').text(name);
-    // $('.results .blog').text(blog);
-    // $('.results .location').text(location);
-    // $('.results .email').text(email);
-    // $('.results .avatar').text(avatar);
-    // $('.results .html').text(html);
-
-// console.log(mainurl);
-
-//     }
-//
-//   });
-// };
-
-var errorDisplayingProfile = function(xhr, type, error){
-    $result.text("Oooops! " + error);
-};
-
-var settings = {
-  method: 'GET',
-  dataType: 'json',
-  url: 'https://api.github.com/users/egdelwonk',
-  error: function(xhr, type, error){
-    $result.text("Oooops! " + error);
-  },
-};
-
-var displayProfile = function(data, textStatus, xhr){
-$.ajax(repos,{
-  error: function(){
-    $result.text('Sorry, bro ' + error);
-
-  },
+$.ajax(repos, {
+ error: function(xhr, type, error){
+   $main.text("Sorry " + error);
+ },
+ success: function(repos, textStatus, xhr){
+   $repos = $('.repos');
+   repos.forEach(function(repo){
+       $repos.append('<h3><a href="'+ repo.html_url+'">' + repo.name + '</a></h3>');
+       $repos.append('<p>' + moment(repo.updated_at).fromNow() + '</p>');
+       console.log(repo);
+   });
+  }
 });
-};
-
-var errorDisplayingProfile = function(xhr, type, error){
-    $result.text("Oooops! " + error);
-};
-
-var settings = {
-  method: 'GET',
-  dataType: 'json',
-  url: 'https://api.github.com/users/egdelwonk',
-  error: function(xhr, type, error){
-    $result.text("Oooops! " + error);
-  },
-};
