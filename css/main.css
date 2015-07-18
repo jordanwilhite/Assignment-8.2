@@ -1,5 +1,39 @@
-.section{
-  width: 100%
-  margin: 5px
-  background: red
+body{
+  background: #fff;
+  margin: 2px;
+
+
+}
+
+section{
+  width: 100%;
+  margin: 0;
+  padding: 0px;
+
+}
+
+section.bigBoy{
+  margin: 33px;
+}
+
+section.bigBoy > section.main{
+  width: 25%;
+  float: left;
+
+
+}
+
+section.bigBoy > section.main img{
+  height: 230px;
+  width: auto;
+  border-radius: 6px;
+}
+
+
+section.bigBoy > section.repos{
+  width: 75%;
+  float: right;
+
+
+
 }
