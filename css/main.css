@@ -1,6 +1,7 @@
 body{
   background: #fff;
-  margin: 2px;
+  margin: 75px;
+  height: auto;
 
 
 }
@@ -13,12 +14,24 @@ section{
 }
 
 section.bigBoy{
-  margin: 33px;
+  margin: 20  px;
+  padding: 100;
+
+
+}
+
+section.repos{
+display: inline-block;
+box-sizing: border-box;
+
 }
 
 section.bigBoy > section.main{
   width: 25%;
   float: left;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
 
 
 }
@@ -33,7 +46,9 @@ section.bigBoy > section.main img{
 section.bigBoy > section.repos{
   width: 75%;
   float: right;
-
-
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 22px;
+  border-bottom: 2px black;
 
 }
