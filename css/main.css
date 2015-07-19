@@ -6,12 +6,16 @@ body{
 
 }
 
+
+
 section{
   width: 100%;
   margin: 0;
   padding: 0px;
 
 }
+
+
 
 section.bigBoy{
   margin: 20  px;
@@ -20,11 +24,15 @@ section.bigBoy{
 
 }
 
+
+
 section.repos{
 display: inline-block;
 box-sizing: border-box;
 
 }
+
+
 
 section.bigBoy > section.main{
   width: 25%;
@@ -32,9 +40,9 @@ section.bigBoy > section.main{
   text-align: center;
   font-family: sans-serif;
 
-
-
 }
+
+
 
 section.bigBoy > section.main img{
   height: 230px;
@@ -42,19 +50,26 @@ section.bigBoy > section.main img{
   border-radius: 6px;
 }
 
+
+
 section.bigBoy > section.main h3{
   font-size: 18px;
   font-weight: bold;
 }
 
+
+
 section.bigBoy > section.main h4{
   font-size: 13px;
-  font-weight: lighter;
+  font-weight: normal;
 
 }
 section.bigBoy > section.main p{
-
+  font-size: 13px;
+  font-weight: normal;
 }
+
+
 section.bigBoy > section.repos{
   width: 75%;
   float: right;
@@ -63,9 +78,13 @@ section.bigBoy > section.repos{
   font-size: 22px;
 
 }
+
+
 section.bigBoy > section.repos h3{
   margin: 0px;
 }
+
+
 section.bigBoy > section.repos p{
 margin: 15px;
 }
